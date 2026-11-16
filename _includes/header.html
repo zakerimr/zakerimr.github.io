@@ -1,0 +1,8 @@
+<header>
+  <a class="site-title" href="{{ '/' | relative_url }}">{{ site.author.name | default: site.title }}</a>
+  <nav>
+    <a href="{{ '/' | relative_url }}">Work</a>
+    <a href="{{ '/about/' | relative_url }}">About</a>
+    {% if site.resume != "" and site.resume %}<a href="{{ site.resume | relative_url }}">Resume</a>{% endif %}
+  </nav>
+</header>

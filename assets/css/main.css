@@ -1,0 +1,219 @@
+/* ==========================================================
+   Site styles
+   Change the values below to restyle the whole site.
+   ========================================================== */
+
+:root {
+  --accent: #1f2937;     /* links, buttons, small details */
+  --text: #4b5563;       /* body text */
+  --background: #f5f5f5; /* page background */
+  --border: #a1a1a1;     /* lines around cards and panels */
+  --image-placeholder: #e5e5e5; /* card image area before a thumbnail is added */
+
+  --font: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-size: 15px;
+  --small-font-size: 13px;
+
+  --page-width: 720px;   /* max width of the content column */
+}
+
+
+/* ---------- Page ---------- */
+
+body {
+  margin: 0 auto;
+  max-width: var(--page-width);
+  padding: 0 16px;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--font-size);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--text);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ---------- Buttons ---------- */
+
+/* Nav links, footer links, and anything with class="button" */
+.button,
+header nav a,
+footer nav a {
+  display: inline-flex;
+  align-items: center;   /* centers an icon with the text */
+  gap: 8px;              /* space between icon and text */
+  padding: 6px 16px;
+  border: 1px solid var(--accent);
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* Header and footer buttons match the project cards: light border that darkens on hover */
+header nav a,
+footer nav a {
+  border-color: var(--border);
+}
+
+header nav a:hover,
+footer nav a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+
+/* ---------- Header and footer ---------- */
+
+header,
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 16px;
+  padding: 24px 0;
+}
+
+footer {
+  margin-top: 64px;
+  font-size: var(--small-font-size);
+}
+
+header nav,
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Your name, top left */
+.site-title {
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+/* ---------- Project list (home page) ---------- */
+
+.projects {
+  list-style: none;
+  padding: 0;
+}
+
+/* Each project is a bordered card: large image on top, text below */
+.projects li {
+  position: relative;
+  margin-bottom: 24px;
+  border: 1px solid var(--border);
+}
+
+/* Whole card is clickable and darkens on hover */
+.projects li:hover {
+  border-color: var(--accent);
+}
+
+/* 16:9 image area; shows as a plain grey block until a thumbnail is set */
+.card-image {
+  aspect-ratio: 16 / 9;
+  background: var(--image-placeholder);
+  border-bottom: 1px solid var(--border);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* fills the area, cropping if the image isn't 16:9 */
+}
+
+.card-body {
+  padding: 20px 24px 24px;
+}
+
+.projects h3 {
+  margin: 0;
+}
+
+.projects h3 a,
+.projects h3 a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Stretch the title link over the whole card */
+.projects h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.projects p {
+  margin: 4px 0 0;
+}
+
+
+/* ---------- Project pages ---------- */
+
+/* Engine · role · team · duration panel */
+.meta {
+  color: var(--accent);
+  font-size: var(--small-font-size);
+}
+
+.project-meta {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+}
+
+/* Row of buttons (e.g. "Play on itch.io") */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* YouTube/Vimeo embed, kept at 16:9 */
+.video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: 24px 0;
+}
+
+.video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Gallery images */
+figure {
+  margin: 24px 0;
+}
+
+figcaption {
+  margin-top: 4px;
+  color: var(--accent);
+  font-size: var(--small-font-size);
+}

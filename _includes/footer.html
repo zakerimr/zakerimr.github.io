@@ -1,0 +1,9 @@
+<footer>
+  <span>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</span>
+  <nav>
+    {% if site.author.email != "" and site.author.email %}<a href="mailto:{{ site.author.email }}">{% include icons/email.svg %}Email</a>{% endif %}
+    {% for s in site.social %}{% if s[1] != "" and s[1] %}
+      <a href="{{ s[1] }}">{% if s[0] == "github" %}{% include icons/github.svg %}GitHub{% else %}{{ s[0] | capitalize }}{% endif %}</a>
+    {% endif %}{% endfor %}
+  </nav>
+</footer>

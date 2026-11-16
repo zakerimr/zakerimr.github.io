@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<ul class="projects">
+  {% assign projects = site.projects | sort: "order" %}
+  {% for project in projects %}
+    {% include project-card.html project=project %}
+  {% endfor %}
+</ul>

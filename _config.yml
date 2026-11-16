@@ -1,0 +1,48 @@
+# Site settings
+title: ZR
+description: Level design portfolio — layouts, blockouts, and case studies.
+url: https://zakerimr.github.io
+baseurl: ""
+lang: en
+
+author:
+  name: Zak Reckmeyer
+  email: "zakmr@icloud.com"        # public contact email shown in footer
+
+# Footer/social links — leave blank to hide
+social:
+  linkedin: ""      # e.g. https://www.linkedin.com/in/username
+  artstation: ""    # e.g. https://www.artstation.com/username
+  itch: ""          # e.g. https://username.itch.io
+  github: https://github.com/zakerimr
+
+# Set to a path (e.g. /assets/resume.pdf) to show a Resume link in the nav
+resume: ""
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor

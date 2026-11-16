@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+{% if page.summary %}<p>{{ page.summary }}</p>{% endif %}
+
+<p class="meta project-meta">
+  {{ page.engine }}{% if page.role %} · {{ page.role }}{% endif %}{% if page.team %} · {{ page.team }}{% endif %}{% if page.duration %} · {{ page.duration }}{% endif %}
+  {% if page.tools %}<br>Tools: {{ page.tools | join: ", " }}{% endif %}
+</p>
+
+{% if page.links %}
+<p class="buttons">
+  {% for link in page.links %}<a class="button" href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+</p>
+{% endif %}
+
+{% if page.hero %}<img src="{{ page.hero | relative_url }}" alt="{{ page.title }}">{% endif %}
+
+{% if page.video %}
+  {% include video.html provider=page.video.provider id=page.video.id title=page.title %}
+{% endif %}
+
+{{ content }}
+
+{% if page.gallery %}
+  {% include gallery.html images=page.gallery %}
+{% endif %}
+
+<p><a class="button" href="{{ '/' | relative_url }}">&larr; All projects</a></p>
