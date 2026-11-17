@@ -19,7 +19,7 @@ links:
 #     caption: "Top-down layout with critical path"
 #   - src: /assets/img/projects/example-level/blockout.jpg
 #     caption: "Greybox pass"
-order: 1
+order: 98
 ---
 
 ## Overview

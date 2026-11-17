@@ -6,14 +6,14 @@ summary: "A three-lane deathmatch map for Counter-Strike 2."
 engine: Hammer 5
 role: Level Designer
 team: Solo
-duration: 4 weeks
+duration: 10 days
 # tools: [Hammer 5]
 # video:
 #   provider: youtube   # youtube | vimeo
 #   id: "VIDEO_ID"
 links:
   - label: Play on Steam
-    url: "https://steamcommunity.com/sharedfiles/filedetails/?l=english&id=3650777597&searchtext="
+    url: "https://steamcommunity.com/sharedfiles/filedetails/?l=english&id=3650777597"
 # gallery:
 #   - src: /assets/img/projects/example-level/topdown.png
 #     caption: "Top-down layout with critical path"
@@ -24,7 +24,7 @@ order: 1
 
 ## Overview
 
-Paper is a three-lane deathmatch map for Counter-Strike 2 based in the headquarters of a paper company. 
+Paper is a three-lane deathmatch map for Counter-Strike 2 located in the headquarters of a paper company. 
 
 ## Design Goals
 
@@ -32,6 +32,7 @@ Paper is a three-lane deathmatch map for Counter-Strike 2 based in the headquart
 - Reduce sightlines to allow for safe respawning
 - Create visually distinct zones for easy navigation
 - Keep the level small to reduce time spent walking
+- Focus on gameplay (formalism) over realism
 
 ## Layout & Flow
 
